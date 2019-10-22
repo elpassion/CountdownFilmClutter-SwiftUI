@@ -312,7 +312,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"CountdownFlimClutter/Preview Content\"";
 				DEVELOPMENT_TEAM = H5QFB36W2F;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = CountdownFlimClutter/Info.plist;
+				INFOPLIST_FILE = CountdownFlimClutter/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -332,7 +332,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"CountdownFlimClutter/Preview Content\"";
 				DEVELOPMENT_TEAM = H5QFB36W2F;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = CountdownFlimClutter/Info.plist;
+				INFOPLIST_FILE = CountdownFlimClutter/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
