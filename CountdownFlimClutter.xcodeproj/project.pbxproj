@@ -56,12 +56,9 @@
 		47BAC421235F2F01007ED558 /* CountdownFlimClutter */ = {
 			isa = PBXGroup;
 			children = (
-				47BAC422235F2F01007ED558 /* AppDelegate.swift */,
-				47BAC424235F2F01007ED558 /* SceneDelegate.swift */,
-				47BAC426235F2F01007ED558 /* ContentView.swift */,
-				47BAC428235F2F02007ED558 /* Assets.xcassets */,
-				47BAC42D235F2F02007ED558 /* LaunchScreen.storyboard */,
-				47BAC430235F2F02007ED558 /* Info.plist */,
+				47BAC438235F302C007ED558 /* Views */,
+				47BAC437235F2FBA007ED558 /* SupportingFiles */,
+				47BAC436235F2FAF007ED558 /* Application */,
 				47BAC42A235F2F02007ED558 /* Preview Content */,
 			);
 			path = CountdownFlimClutter;
@@ -73,6 +70,33 @@
 				47BAC42B235F2F02007ED558 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		47BAC436235F2FAF007ED558 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				47BAC422235F2F01007ED558 /* AppDelegate.swift */,
+				47BAC424235F2F01007ED558 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		47BAC437235F2FBA007ED558 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				47BAC428235F2F02007ED558 /* Assets.xcassets */,
+				47BAC42D235F2F02007ED558 /* LaunchScreen.storyboard */,
+				47BAC430235F2F02007ED558 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		47BAC438235F302C007ED558 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				47BAC426235F2F01007ED558 /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
