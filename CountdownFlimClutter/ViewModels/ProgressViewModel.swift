@@ -9,10 +9,11 @@ class FilmClutterViewModel: ObservableObject {
     @Published var countdownNumber: Int = 9
 
     func start() {
-        changeValue()
+        reset()
 
         timerCancellable = Timer.publish(every: time, on: .main, in: .common)
             .autoconnect()
+            .handleEvents(receiveSubscription: { [weak self] _ in self?.changeValue() })
             .sink(receiveValue: { [weak self] _ in self?.changeValue() })
     }
 
