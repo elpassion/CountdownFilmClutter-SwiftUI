@@ -2,7 +2,7 @@ import SwiftUI
 
 struct ContentView: View {
 
-    var viewModel = ProgressViewModel.default
+    var viewModel = FilmClutterViewModel.default
 
     var body: some View {
         ZStack {
@@ -11,12 +11,9 @@ struct ContentView: View {
             VStack {
                 FilmClutterView()
                     .fixedSize(horizontal: false, vertical: true)
-                Button(action: {
-                    withAnimation {
-                        self.viewModel.animate.toggle()
-                    }
-                }) {
-                    Text("Tap on me")
+                HStack {
+                    Button(action: { self.viewModel.start() }, label: { Text("Start") })
+                    Button(action: { self.viewModel.reset() }, label: { Text("Reset") })
                 }
             }
         }
