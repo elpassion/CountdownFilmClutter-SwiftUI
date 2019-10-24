@@ -20,6 +20,7 @@
 		47D3E56F2361970400B17F33 /* FilmClutterProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D3E56E2361970400B17F33 /* FilmClutterProgressView.swift */; };
 		47D3E5722361977800B17F33 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D3E5712361977800B17F33 /* Color.swift */; };
 		47D3E5742361983900B17F33 /* SightShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D3E5732361983900B17F33 /* SightShape.swift */; };
+		47D3E5782361CF8B00B17F33 /* HoleInViewMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D3E5772361CF8B00B17F33 /* HoleInViewMask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		47D3E56E2361970400B17F33 /* FilmClutterProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmClutterProgressView.swift; sourceTree = "<group>"; };
 		47D3E5712361977800B17F33 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		47D3E5732361983900B17F33 /* SightShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SightShape.swift; sourceTree = "<group>"; };
+		47D3E5772361CF8B00B17F33 /* HoleInViewMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoleInViewMask.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				47D3E569236196B700B17F33 /* FilmClutterContentView.swift */,
 				47D3E56E2361970400B17F33 /* FilmClutterProgressView.swift */,
 				47D3E5732361983900B17F33 /* SightShape.swift */,
+				47D3E5772361CF8B00B17F33 /* HoleInViewMask.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				47D3E56D236196E800B17F33 /* ProgressViewModel.swift in Sources */,
 				47D3E5682361969D00B17F33 /* FilmClutterEdgeView.swift in Sources */,
 				47D3E5742361983900B17F33 /* SightShape.swift in Sources */,
+				47D3E5782361CF8B00B17F33 /* HoleInViewMask.swift in Sources */,
 				47BAC423235F2F01007ED558 /* AppDelegate.swift in Sources */,
 				47D3E56F2361970400B17F33 /* FilmClutterProgressView.swift in Sources */,
 				47BAC425235F2F01007ED558 /* SceneDelegate.swift in Sources */,

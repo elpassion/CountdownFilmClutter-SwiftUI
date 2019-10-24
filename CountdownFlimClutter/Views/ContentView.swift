@@ -12,8 +12,11 @@ struct ContentView: View {
                 FilmClutterView()
                     .fixedSize(horizontal: false, vertical: true)
                 HStack {
+                    Spacer()
                     Button(action: { self.viewModel.start() }, label: { Text("Start") })
+                    Spacer()
                     Button(action: { self.viewModel.reset() }, label: { Text("Reset") })
+                    Spacer()
                 }
             }
         }
