@@ -1,8 +1,25 @@
 import SwiftUI
 
 struct ContentView: View {
+
+    var viewModel = ProgressViewModel.default
+
     var body: some View {
-        Text("Hello World")
+        ZStack {
+            Color.white
+                .edgesIgnoringSafeArea(.all)
+            VStack {
+                FilmClutterView()
+                    .fixedSize(horizontal: false, vertical: true)
+                Button(action: {
+                    withAnimation {
+                        self.viewModel.animate.toggle()
+                    }
+                }) {
+                    Text("Tap on me")
+                }
+            }
+        }
     }
 }
 
