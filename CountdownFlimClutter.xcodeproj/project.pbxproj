@@ -72,11 +72,11 @@
 		47BAC421235F2F01007ED558 /* CountdownFlimClutter */ = {
 			isa = PBXGroup;
 			children = (
-				47D3E56B236196DD00B17F33 /* ViewModels */,
-				47BAC438235F302C007ED558 /* Views */,
-				47BAC437235F2FBA007ED558 /* SupportingFiles */,
 				47BAC436235F2FAF007ED558 /* Application */,
 				47BAC42A235F2F02007ED558 /* Preview Content */,
+				47BAC437235F2FBA007ED558 /* SupportingFiles */,
+				47D3E56B236196DD00B17F33 /* ViewModels */,
+				47BAC438235F302C007ED558 /* Views */,
 			);
 			path = CountdownFlimClutter;
 			sourceTree = "<group>";
@@ -113,12 +113,12 @@
 			isa = PBXGroup;
 			children = (
 				47BAC426235F2F01007ED558 /* ContentView.swift */,
-				47D3E5652361966900B17F33 /* FilmClutterView.swift */,
-				47D3E5672361969C00B17F33 /* FilmClutterEdgeView.swift */,
 				47D3E569236196B700B17F33 /* FilmClutterContentView.swift */,
+				47D3E5672361969C00B17F33 /* FilmClutterEdgeView.swift */,
 				47D3E56E2361970400B17F33 /* FilmClutterProgressView.swift */,
-				47D3E5732361983900B17F33 /* SightShape.swift */,
+				47D3E5652361966900B17F33 /* FilmClutterView.swift */,
 				47D3E5772361CF8B00B17F33 /* HoleInViewMask.swift */,
+				47D3E5732361983900B17F33 /* SightShape.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
