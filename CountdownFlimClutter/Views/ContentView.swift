@@ -6,20 +6,41 @@ struct ContentView: View {
 
     var body: some View {
         ZStack {
-            Color.background
+            VStack(spacing: 0) {
+                LinearGradient(gradient: self.gradient, startPoint: .bottom, endPoint: .top)
+                LinearGradient(gradient: self.gradient, startPoint: .top, endPoint: .bottom)
+            }
                 .edgesIgnoringSafeArea(.all)
-            VStack {
+            VStack(spacing: 0) {
+                Spacer()
                 FilmClutterView()
-                HStack {
+                HStack() {
                     Spacer()
                     Button(action: { self.viewModel.start() }, label: { Text("Start") })
                         .disabled(self.viewModel.animateProgress)
+                        .foregroundColor(self.viewModel.animateProgress ? Color.gray : Color.white)
+                        .padding(.all, 16)
                     Spacer()
                     Button(action: { self.viewModel.reset() }, label: { Text("Reset") })
+                        .foregroundColor(Color.white)
+                        .padding(.all, 16)
                     Spacer()
                 }
             }
         }
+    }
+
+    // MARK: - Private
+
+    private var gradient: Gradient {
+        Gradient(stops: stops)
+    }
+
+    private var stops: [Gradient.Stop] {
+        [
+            .init(color: .black, location: 0),
+            .init(color: .background, location: 1)
+        ]
     }
 }
 
