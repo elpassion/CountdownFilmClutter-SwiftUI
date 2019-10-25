@@ -2,7 +2,7 @@ import SwiftUI
 
 struct FilmClutterProgressView: View {
 
-    @ObservedObject var viewModel = FilmClutterViewModel.default
+    @EnvironmentObject var viewModel: FilmClutterViewModel
 
     var body: some View {
         GeometryReader { geometry in

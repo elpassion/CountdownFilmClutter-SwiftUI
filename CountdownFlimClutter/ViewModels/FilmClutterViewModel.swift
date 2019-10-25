@@ -3,8 +3,6 @@ import SwiftUI
 
 class FilmClutterViewModel: ObservableObject {
 
-    static var `default` = FilmClutterViewModel()
-
     @Published var animateProgress: Bool = false
     @Published var countdownNumber: Int = 9
 

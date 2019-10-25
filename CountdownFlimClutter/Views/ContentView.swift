@@ -2,7 +2,7 @@ import SwiftUI
 
 struct ContentView: View {
 
-    var viewModel = FilmClutterViewModel.default
+    @EnvironmentObject var viewModel: FilmClutterViewModel
 
     var body: some View {
         ZStack {
