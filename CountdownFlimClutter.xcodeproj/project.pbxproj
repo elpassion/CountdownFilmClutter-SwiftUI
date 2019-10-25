@@ -74,6 +74,7 @@
 		47BAC421235F2F01007ED558 /* CountdownFlimClutter */ = {
 			isa = PBXGroup;
 			children = (
+				47C3409223631B2C000A1648 /* Extensions */,
 				47BAC436235F2FAF007ED558 /* Application */,
 				47BAC42A235F2F02007ED558 /* Preview Content */,
 				47BAC437235F2FBA007ED558 /* SupportingFiles */,
@@ -104,9 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				47BAC428235F2F02007ED558 /* Assets.xcassets */,
-				47BAC42D235F2F02007ED558 /* LaunchScreen.storyboard */,
 				47BAC430235F2F02007ED558 /* Info.plist */,
-				47D3E5712361977800B17F33 /* Color.swift */,
+				47BAC42D235F2F02007ED558 /* LaunchScreen.storyboard */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -115,15 +115,23 @@
 			isa = PBXGroup;
 			children = (
 				47BAC426235F2F01007ED558 /* ContentView.swift */,
+				475BE4792362EB150077A87F /* FilledCircle.swift */,
 				47D3E569236196B700B17F33 /* FilmClutterContentView.swift */,
 				47D3E5672361969C00B17F33 /* FilmClutterEdgeView.swift */,
 				47D3E56E2361970400B17F33 /* FilmClutterProgressView.swift */,
 				47D3E5652361966900B17F33 /* FilmClutterView.swift */,
 				47D3E5772361CF8B00B17F33 /* HoleInViewMask.swift */,
 				47D3E5732361983900B17F33 /* SightShape.swift */,
-				475BE4792362EB150077A87F /* FilledCircle.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		47C3409223631B2C000A1648 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				47D3E5712361977800B17F33 /* Color.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		47D3E56B236196DD00B17F33 /* ViewModels */ = {
