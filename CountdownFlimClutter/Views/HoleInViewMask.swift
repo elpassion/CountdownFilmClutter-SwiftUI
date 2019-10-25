@@ -12,7 +12,8 @@ struct HoleInViewMask: View {
             Path { path in
                 path.addRect(.init(x: 0, y: 0, width: geometry.size.width, height: geometry.size.height))
                 path.addRoundedRect(in: self.holeRect, cornerSize: self.cornerSize)
-            }.fill(style: .init(eoFill: true))
+            }
+                .fill(style: .init(eoFill: true))
         }
     }
 
