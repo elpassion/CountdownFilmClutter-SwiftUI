@@ -8,7 +8,7 @@ struct FilmClutterEdgeView: View {
 
     var body: some View {
         VStack(spacing: 0) {
-            ForEach(0...6, id: \.self) { _ in
+            ForEach(0...50, id: \.self) { _ in
                 Color.clear
                     .frame(width: 35, height: 28)
                     .padding(self.edgeSide.biggerEdge, 10)

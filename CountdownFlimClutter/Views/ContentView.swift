@@ -10,7 +10,6 @@ struct ContentView: View {
                 .edgesIgnoringSafeArea(.all)
             VStack {
                 FilmClutterView()
-                    .fixedSize(horizontal: false, vertical: true)
                 HStack {
                     Spacer()
                     Button(action: { self.viewModel.start() }, label: { Text("Start") })
@@ -26,6 +25,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(FilmClutterViewModel())
     }
 }
