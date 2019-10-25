@@ -3,20 +3,28 @@ import SwiftUI
 
 class FilmClutterViewModel: ObservableObject {
 
-    @Published var animateProgress: Bool = false
+    @Published var animationInProgress: Bool = false
     @Published var countdownNumber: Int = 9
 
     func start() {
         reset()
 
-        timerCancellable = Timer.publish(every: time, on: .main, in: .common)
+        let just = Just(())
+            .tryMap { _ in }
+            .eraseToAnyPublisher()
+
+        let timer = Timer.publish(every: time, on: .main, in: .common)
             .autoconnect()
-            .handleEvents(receiveSubscription: { [weak self] _ in self?.changeValue() })
-            .sink(receiveValue: { [weak self] _ in self?.changeValue() })
+            .tryMap { _ in }
+            .eraseToAnyPublisher()
+
+        timerCancellable = Publishers.Merge(just, timer)
+            .sink(receiveCompletion: { _ in },
+                  receiveValue: { [weak self] in self?.changeValue() })
     }
 
     func reset() {
-        animateProgress = false
+        animationInProgress = false
         countdownNumber = 9
         timerCancellable?.cancel()
     }
@@ -24,7 +32,7 @@ class FilmClutterViewModel: ObservableObject {
     // MARK: - Private
 
     private func changeValue() {
-        animateProgress = false
+        animationInProgress = false
 
         guard countdownNumber > 0 else {
             timerCancellable?.cancel()
@@ -40,7 +48,7 @@ class FilmClutterViewModel: ObservableObject {
 
     private func animateIfNeeded() {
         guard countdownNumber > 0 else { return }
-        animateProgress = true
+        animationInProgress = true
     }
 
     private let time: Double = 0.8

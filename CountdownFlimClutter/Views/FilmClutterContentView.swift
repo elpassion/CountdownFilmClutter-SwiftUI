@@ -26,6 +26,8 @@ struct FilmClutterContentView: View {
         }
     }
 
+    // MARK: - Private
+
     private var gradient: Gradient {
         Gradient(stops: colorStops)
     }
