@@ -14,6 +14,7 @@ struct ContentView: View {
                 HStack {
                     Spacer()
                     Button(action: { self.viewModel.start() }, label: { Text("Start") })
+                        .disabled(self.viewModel.animateProgress)
                     Spacer()
                     Button(action: { self.viewModel.reset() }, label: { Text("Reset") })
                     Spacer()
