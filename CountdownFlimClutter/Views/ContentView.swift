@@ -6,7 +6,7 @@ struct ContentView: View {
 
     var body: some View {
         ZStack {
-            Color.white
+            Color.background
                 .edgesIgnoringSafeArea(.all)
             VStack {
                 FilmClutterView()
