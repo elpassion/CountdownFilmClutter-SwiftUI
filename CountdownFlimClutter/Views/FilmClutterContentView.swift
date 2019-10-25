@@ -21,6 +21,8 @@ struct FilmClutterContentView: View {
                 startRadius: 0,
                 endRadius: max(geometry.size.height * 0.75, geometry.size.width * 0.75))
             )
+                .padding([.top, .bottom], 2.5)
+                .background(Color.black)
         }
     }
 
