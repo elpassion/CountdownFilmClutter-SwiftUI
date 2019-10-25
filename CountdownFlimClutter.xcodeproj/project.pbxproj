@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		475BE47A2362EB150077A87F /* FilledCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475BE4792362EB150077A87F /* FilledCircle.swift */; };
 		47BAC423235F2F01007ED558 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BAC422235F2F01007ED558 /* AppDelegate.swift */; };
 		47BAC425235F2F01007ED558 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BAC424235F2F01007ED558 /* SceneDelegate.swift */; };
 		47BAC427235F2F01007ED558 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BAC426235F2F01007ED558 /* ContentView.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		475BE4792362EB150077A87F /* FilledCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilledCircle.swift; sourceTree = "<group>"; };
 		47BAC41F235F2F01007ED558 /* CountdownFlimClutter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountdownFlimClutter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47BAC422235F2F01007ED558 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47BAC424235F2F01007ED558 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				47D3E5652361966900B17F33 /* FilmClutterView.swift */,
 				47D3E5772361CF8B00B17F33 /* HoleInViewMask.swift */,
 				47D3E5732361983900B17F33 /* SightShape.swift */,
+				475BE4792362EB150077A87F /* FilledCircle.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 				47D3E56A236196B700B17F33 /* FilmClutterContentView.swift in Sources */,
 				47BAC427235F2F01007ED558 /* ContentView.swift in Sources */,
 				47D3E5722361977800B17F33 /* Color.swift in Sources */,
+				475BE47A2362EB150077A87F /* FilledCircle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
