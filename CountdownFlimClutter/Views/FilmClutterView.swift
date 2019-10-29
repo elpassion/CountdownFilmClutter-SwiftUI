@@ -11,10 +11,10 @@ struct FilmClutterView: View {
                     .frame(height: geometry.height)
                 HStack {
                     FilmClutterEdgeView(edgeSide: .left)
-                        .offset(y: self.viewModel.animationInProgress ? 300 : 0)
+                        .offset(y: self.viewModel.isAnimating ? 300 : 0)
                     Spacer()
                     FilmClutterEdgeView(edgeSide: .right)
-                        .offset(y: self.viewModel.animationInProgress ? 300 : 0)
+                        .offset(y: self.viewModel.isAnimating ? 300 : 0)
                 }
                     .frame(height: geometry.height, alignment: .center)
                     .clipped()

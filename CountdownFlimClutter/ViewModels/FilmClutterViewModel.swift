@@ -3,9 +3,7 @@ import SwiftUI
 
 class FilmClutterViewModel: ObservableObject {
 
-    static let initialCountdownNumber = 5
-
-    @Published var animationInProgress: Bool = false
+    @Published var isAnimating: Bool = false
     @Published var countdownNumber: Int = FilmClutterViewModel.initialCountdownNumber
 
     func start() {
@@ -25,7 +23,7 @@ class FilmClutterViewModel: ObservableObject {
     }
 
     func reset() {
-        animationInProgress = false
+        isAnimating = false
         countdownNumber = FilmClutterViewModel.initialCountdownNumber
         timerCancellable?.cancel()
     }
@@ -33,7 +31,7 @@ class FilmClutterViewModel: ObservableObject {
     // MARK: - Private
 
     private func changeValue() {
-        animationInProgress = false
+        isAnimating = false
 
         guard countdownNumber > 0 else {
             timerCancellable?.cancel()
@@ -49,8 +47,10 @@ class FilmClutterViewModel: ObservableObject {
 
     private func animateIfNeeded() {
         guard countdownNumber > 0 else { return }
-        animationInProgress = true
+        isAnimating = true
     }
+
+    private static let initialCountdownNumber = 5
 
     private let time: Double = 0.8
     private var timerCancellable: AnyCancellable?

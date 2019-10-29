@@ -17,8 +17,8 @@ struct ContentView: View {
                 HStack() {
                     Spacer()
                     Button(action: { self.viewModel.start() }, label: { Text("Start") })
-                        .disabled(self.viewModel.animationInProgress)
-                        .foregroundColor(self.viewModel.animationInProgress ? Color.gray : Color.white)
+                        .disabled(self.viewModel.isAnimating)
+                        .foregroundColor(self.viewModel.isAnimating ? Color.gray : Color.white)
                         .padding(.all, 16)
                     Spacer()
                     Button(action: { self.viewModel.reset() }, label: { Text("Reset") })
