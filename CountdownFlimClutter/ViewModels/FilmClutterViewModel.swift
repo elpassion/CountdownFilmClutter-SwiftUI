@@ -9,16 +9,14 @@ class FilmClutterViewModel: ObservableObject {
     func start() {
         reset()
 
-        let just = Just(())
-            .tryMap { _ in }
-            .eraseToAnyPublisher()
-
-        let timer = Timer.publish(every: time, on: .main, in: .common)
+        let timer: AnyPublisher<Void, Never> = Timer
+            .publish(every: time, on: .main, in: .common)
             .autoconnect()
-            .tryMap { _ in }
+            .map { _ in }
+            .catch { _ in Empty() }
             .eraseToAnyPublisher()
 
-        timerCancellable = Publishers.Merge(just, timer)
+        timerCancellable = Publishers.Merge(Just(()), timer)
             .sink { [weak self] in self?.changeValue() }
     }
 
@@ -57,10 +55,10 @@ class FilmClutterViewModel: ObservableObject {
 
 }
 
-private extension Publisher {
-
-    func sink(receiveValue: @escaping ((Self.Output) -> Void)) -> AnyCancellable {
-        self.sink(receiveCompletion: { _ in }, receiveValue: receiveValue)
-    }
-
-}
+//private extension Publisher {
+//
+//    func sink(receiveValue: @escaping ((Self.Output) -> Void)) -> AnyCancellable {
+//        self.sink(receiveCompletion: { _ in }, receiveValue: receiveValue)
+//    }
+//
+//}
