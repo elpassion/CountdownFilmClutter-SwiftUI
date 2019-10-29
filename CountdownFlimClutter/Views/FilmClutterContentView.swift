@@ -10,7 +10,7 @@ struct FilmClutterContentView: View {
                 FilmClutterProgressView()
                 SightShape()
                     .stroke(lineWidth: 3)
-                    .fill(Color.sights)
+                    .fill(Color.sight)
                 Text(String(self.viewModel.countdownNumber))
                     .foregroundColor(Color.fontColor)
                     .fontWeight(.medium)
@@ -34,7 +34,7 @@ struct FilmClutterContentView: View {
 
     private var colorStops: [Gradient.Stop] {
         [
-            .init(color: .sights, location: 0),
+            .init(color: .sight, location: 0),
             .init(color: .black, location: 1)
         ]
     }
