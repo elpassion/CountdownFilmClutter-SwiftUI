@@ -54,11 +54,3 @@ class FilmClutterViewModel: ObservableObject {
     private var timerCancellable: AnyCancellable?
 
 }
-
-//private extension Publisher {
-//
-//    func sink(receiveValue: @escaping ((Self.Output) -> Void)) -> AnyCancellable {
-//        self.sink(receiveCompletion: { _ in }, receiveValue: receiveValue)
-//    }
-//
-//}
