@@ -3,8 +3,10 @@ import SwiftUI
 
 class FilmClutterViewModel: ObservableObject {
 
+    static let initialCountdownNumber = 5
+
     @Published var animationInProgress: Bool = false
-    @Published var countdownNumber: Int = 9
+    @Published var countdownNumber: Int = FilmClutterViewModel.initialCountdownNumber
 
     func start() {
         reset()
@@ -19,13 +21,12 @@ class FilmClutterViewModel: ObservableObject {
             .eraseToAnyPublisher()
 
         timerCancellable = Publishers.Merge(just, timer)
-            .sink(receiveCompletion: { _ in },
-                  receiveValue: { [weak self] in self?.changeValue() })
+            .sink { [weak self] in self?.changeValue() }
     }
 
     func reset() {
         animationInProgress = false
-        countdownNumber = 9
+        countdownNumber = FilmClutterViewModel.initialCountdownNumber
         timerCancellable?.cancel()
     }
 
@@ -53,5 +54,13 @@ class FilmClutterViewModel: ObservableObject {
 
     private let time: Double = 0.8
     private var timerCancellable: AnyCancellable?
+
+}
+
+private extension Publisher {
+
+    func sink(receiveValue: @escaping ((Self.Output) -> Void)) -> AnyCancellable {
+        self.sink(receiveCompletion: { _ in }, receiveValue: receiveValue)
+    }
 
 }
