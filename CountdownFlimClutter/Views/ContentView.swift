@@ -6,10 +6,7 @@ struct ContentView: View {
 
     var body: some View {
         ZStack {
-            VStack(spacing: 0) {
-                LinearGradient(gradient: self.gradient, startPoint: .bottom, endPoint: .top)
-                LinearGradient(gradient: self.gradient, startPoint: .top, endPoint: .bottom)
-            }
+            LinearGradient(gradient: self.gradient, startPoint: .top, endPoint: .bottom)
                 .edgesIgnoringSafeArea(.all)
             VStack(spacing: 0) {
                 Spacer()
@@ -38,7 +35,8 @@ struct ContentView: View {
 
     private var stops: [Gradient.Stop] {
         [
-            .init(color: .black, location: 0),
+            .init(color: .background, location: 0),
+            .init(color: .black, location: 0.5),
             .init(color: .background, location: 1)
         ]
     }
