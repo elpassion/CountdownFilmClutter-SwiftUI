@@ -5,7 +5,7 @@
 
 Old fashioned countdown film clutter which is written in SwiftUI to demonstrate possibilities of new Apple UI framework.
 
-![gif_preview](Gifs/countdown_film_clutter.gif)
+![gif_preview](Gifs/countdown_film_clutter_2.gif)
 
 ## License
 
